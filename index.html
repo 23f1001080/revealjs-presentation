@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- RevealJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Slide 1 -->
+        <section>
+          <h1>Quarterly Earnings Report</h1>
+          <p>Email: <b>23f1001080@ds.study.iitm.ac.in</b></p>
+          <aside class="notes">
+            Introduce the financial results and major trends here.
+          </aside>
+        </section>
+
+        <!-- Slide 2: Markdown Slide -->
+        <section data-markdown>
+          <textarea data-template>
+## Key Financial Highlights
+
+- Revenue Growth: **12%**
+- Operating Margin: **18%**
+- EPS: **₹4.21**
+
+---
+
+### Quick Python Snippet
+
+```python
+import pandas as pd
+df = pd.read_csv("finance.csv")
+print(df.describe())
+      </textarea>
+    </section>
+
+    <!-- Slide 3: Animated Fragments -->
+    <section>
+      <h2>Quarterly Insights</h2>
+      <ul>
+        <li class="fragment">Client acquisition increased</li>
+        <li class="fragment">Cloud revenue doubled</li>
+        <li class="fragment fade-up">Operating costs optimized</li>
+      </ul>
+      <aside class="notes">Explain each insight one by one.</aside>
+    </section>
+
+    <!-- Slide 4: Math Formula -->
+    <section>
+      <h2>Financial Formula</h2>
+      <p>Return on Investment:</p>
+      <p>\\[
+        ROI = \frac{Net\ Profit}{Investment} \times 100
+      \\]</p>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  Reveal.initialize({
+    progress: true,
+    controls: true,
+    hash: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+  });
+  hljs.highlightAll();
+</script>
