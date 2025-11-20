@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
-    <!-- RevealJS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <!-- Core RevealJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
 
-    <!-- Code Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
-    <!-- MathJax -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Highlight.js styling -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
+
+    <title>Quarterly Earnings Report</title>
   </head>
 
   <body>
@@ -23,44 +29,43 @@
         <!-- Slide 1 -->
         <section>
           <h1>Quarterly Earnings Report</h1>
-          <p style="font-size: 28px; color: #333;">
-            Email: <b>23f1001080@ds.study.iitm.ac.in</b>
-          </p>
+          <p>Email: <b>23f1001080@ds.study.iitm.ac.in</b></p>
+          <aside class="notes">
+            Opening slide for the stakeholder presentation.
+          </aside>
         </section>
 
-
-        <!-- Slide 2: Markdown Slide -->
+        <!-- Slide 2 (Markdown) -->
         <section data-markdown>
           <textarea data-template>
-## Key Financial Highlights
+## Key Metrics
 
-- Revenue Growth: **12%**
-- Operating Margin: **18%**
+- Revenue: **12% growth**
+- Margin: **18%**
 - EPS: **₹4.21**
 
 ---
 
-### Quick Python Snippet
+### Code Example
 
 ```python
 import pandas as pd
 df = pd.read_csv("finance.csv")
-print(df.describe())
-      </textarea>
+print(df.head())
+                  </textarea>
     </section>
 
-    <!-- Slide 3: Animated Fragments -->
+    <!-- Slide 3 (Animated fragments) -->
     <section>
-      <h2>Quarterly Insights</h2>
+      <h2>Highlights</h2>
       <ul>
-        <li class="fragment">Client acquisition increased</li>
         <li class="fragment">Cloud revenue doubled</li>
-        <li class="fragment fade-up">Operating costs optimized</li>
+        <li class="fragment">Cost efficiency improved</li>
+        <li class="fragment fade-up">Customer base expanded</li>
       </ul>
-      <aside class="notes">Explain each insight one by one.</aside>
     </section>
 
-    <!-- Slide 4: Math Formula -->
+    <!-- Slide 4 (Math) -->
     <section>
       <h2>Financial Formula</h2>
       <p>Return on Investment:</p>
@@ -74,10 +79,7 @@ print(df.describe())
 
 <script>
   Reveal.initialize({
-    progress: true,
-    controls: true,
     hash: true,
-    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+    plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
   });
-  hljs.highlightAll();
 </script>
