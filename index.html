@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Quarterly Earnings — RevealJS</title>
 
-  <!-- RevealJS CSS (CDN) -->
+  <!-- RevealJS CSS from CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
 
   <!-- Highlight.js for code highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 
   <style>
-    /* small custom styling */
-    .reveal { font-family: "Segoe UI", Roboto, Arial, sans-serif; }
-    .email-note { font-size:0.9rem; color:#666; margin-top:6px; }
-    pre code { font-size: 0.85rem; }
-    /* reduce default margin for speaker notes preview */
-    .reveal .slides section aside.notes { font-size:0.9rem; color:#444; }
+    /* Small custom styling so email is visible and accessible */
+    .presenter-email {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      font-size: 14px;
+      color: #666;
+      opacity: 0.95;
+    }
+    /* Make sure speaker notes are readable */
+    .notes { font-size: 0.9em; color: #222; }
   </style>
 </head>
 <body>
@@ -26,106 +31,98 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- Slide 1: Title (includes email - REQUIRED) -->
+      <!-- Slide 1: Title -->
       <section>
-        <h1>Quarterly Earnings Report — Q4</h1>
-        <h3>Interactive technical report</h3>
-        <p class="email-note">Contact: <strong>23f1001080@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">Start with a quick greeting and summary. Mention the email shown on the slide for verification.</aside>
+        <h1 style="font-size:4.2rem;margin:0">QUARTERLY<br/>EARNINGS REPORT</h1>
+        <p style="position:absolute;right:22px;bottom:22px;font-size:14px;color:#444">23f1001080@ds.study.iitm.ac.in</p>
+        <aside class="notes">Open with a 30-second summary about the quarter.</aside>
       </section>
 
-      <!-- Slide 2: Markdown slide -->
+      <!-- Slide 2: Markdown style slide (inline markdown) -->
       <section data-markdown>
         <textarea data-template>
-## Executive Summary (Markdown slide)
-
-- Revenue growth improved over the quarter.
-- Cost optimization reduced operating expenses.
-- Recommend targeted spend increase for top-performing regions.
+## Summary (Q1–Q4)
+- Revenue growth slowed in Q4 compared to Q3.
+- Key drivers: retention, pricing, new accounts.
 
 ---
-## Next Steps
-1. Deep-dive into region-performance
-2. Reallocate marketing budget
-3. Prepare A/B tests for channel mix
+
+## Action items
+1. Investigate churn in top accounts  
+2. Increase targeted marketing in Region East  
         </textarea>
       </section>
 
-      <!-- Slide 3: Fragments (animated bullets) -->
+      <!-- Slide 3: Fragments (animated list) -->
       <section>
-        <h2>Key Insights (appear one-by-one)</h2>
+        <h2>Quarterly Insights</h2>
         <ul>
-          <li class="fragment">Client acquisition up by 12%</li>
-          <li class="fragment">Cloud revenue doubled versus last quarter</li>
-          <li class="fragment fade-up">Churn held steady; retention initiatives recommended</li>
+          <li class="fragment">Client acquisition increased</li>
+          <li class="fragment">Cloud revenue doubled</li>
+          <li class="fragment fade-up">Operating costs optimized</li>
         </ul>
-        <aside class="notes">Click through fragments and explain each point.</aside>
+        <aside class="notes">Explain each insight one by one.</aside>
       </section>
 
-      <!-- Slide 4: Code sample with syntax highlighting -->
+      <!-- Slide 4: Code sample with highlighting -->
       <section>
-        <h2>Sample: Data loading (Python)</h2>
-        <pre><code class="python">
-import pandas as pd
+        <h2>Code Example</h2>
+        <pre><code class="language-python">
+def roi(net_profit, investment):
+    return (net_profit / investment) * 100
 
-# Load quarterly data
-df = pd.read_csv('quarterly_revenue.csv')
-print(df.head())
+print(roi(25000, 100000))
         </code></pre>
-        <aside class="notes">Show how data was loaded; mention file location if presenting live.</aside>
+        <aside class="notes">Show this simple ROI example to connect math to business.</aside>
       </section>
 
-      <!-- Slide 5: Math (LaTeX via MathJax/Reveal Math plugin) -->
+      <!-- Slide 5: Math formula using Reveal Math (KaTeX) -->
       <section>
         <h2>Financial Formula</h2>
         <p>Return on Investment (ROI):</p>
-        <p>
-          \[
-            ROI = \frac{\text{Net Profit}}{\text{Investment}} \times 100
-          \]
-        </p>
-        <aside class="notes">Explain ROI and how we applied it to campaign spends.</aside>
+        <p>\\[
+          ROI = \frac{\text{Net Profit}}{\text{Investment}} \times 100
+        \\]</p>
       </section>
 
-      <!-- Slide 6: Simple chart placeholder (iframe/data-driven visuals can be embedded) -->
-      <section id="chart-slide">
-        <h2>Interactive Chart (placeholder)</h2>
-        <div id="chart" style="width:80%; height:300px; margin: 0 auto; border:1px dashed #ddd; display:flex; align-items:center; justify-content:center;">
-          <em>Embed your interactive chart (Plotly/D3) here</em>
-        </div>
-        <aside class="notes">When presenting, show the live chart. Use Plotly or Observable embed links.</aside>
-      </section>
-
-      <!-- Slide 7: Closing and speaker notes -->
+      <!-- Slide 6: Contact / verification slide (email repeated plainly) -->
       <section>
-        <h2>Questions & Next Steps</h2>
-        <p>Thanks — reach me at <strong>23f1001080@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">Wrap up. Ask for questions and remind the audience of the follow-up plan.</aside>
+        <h3>Contact / Author</h3>
+        <p>Name: Sakshi Agarwal</p>
+        <p>Email: <strong>23f1001080@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">Use this slide to end and show contact info.</aside>
       </section>
 
     </div>
   </div>
 
-  <!-- RevealJS and plugin scripts (CDN) -->
+  <!-- RevealJS + Plugins (from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+  <!-- Plugins: markdown, highlight, math, notes -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+  <!-- highlight.js (used by plugin) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
   <script>
-    // Initialize Reveal with the plugins used above
+    // Initialize Reveal with plugins
     Reveal.initialize({
-      hash: true,
-      controls: true,
-      progress: true,
       width: 1280,
       height: 720,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
+      controls: true,
+      progress: true,
+      history: true,
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
     });
 
-    // Ensure highlight.js runs
-    hljs.highlightAll();
+    // Force code highlight (safety)
+    if (window.hljs) hljs.highlightAll();
   </script>
+
 </body>
 </html>
