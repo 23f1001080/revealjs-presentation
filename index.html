@@ -15,27 +15,41 @@
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
-    <!-- Highlight.js styling -->
+    <!-- Highlight.js -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
 
     <title>Quarterly Earnings Report</title>
+
+    <!-- ADD EMAIL ON ALL SLIDES -->
+    <style>
+      .global-email {
+        position: fixed;
+        bottom: 15px;
+        right: 25px;
+        font-size: 16px;
+        color: #555;
+        opacity: 0.8;
+        z-index: 9999;
+      }
+    </style>
   </head>
 
   <body>
+
+    <!-- EMAIL FLOAT -->
+    <div class="global-email">23f1001080@ds.study.iitm.ac.in</div>
+
     <div class="reveal">
       <div class="slides">
 
         <!-- Slide 1 -->
         <section>
           <h1>Quarterly Earnings Report</h1>
-          <p>Email: <b>23f1001080@ds.study.iitm.ac.in</b></p>
-          <aside class="notes">
-            Opening slide for the stakeholder presentation.
-          </aside>
+          <aside class="notes">Opening slide for the stakeholder presentation.</aside>
         </section>
 
-        <!-- Slide 2 (Markdown) -->
+        <!-- Slide 2 -->
         <section data-markdown>
           <textarea data-template>
 ## Key Metrics
@@ -52,10 +66,10 @@
 import pandas as pd
 df = pd.read_csv("finance.csv")
 print(df.head())
-                  </textarea>
+                </textarea>
     </section>
 
-    <!-- Slide 3 (Animated fragments) -->
+    <!-- Slide 3 -->
     <section>
       <h2>Highlights</h2>
       <ul>
@@ -65,13 +79,15 @@ print(df.head())
       </ul>
     </section>
 
-    <!-- Slide 4 (Math) -->
+    <!-- Slide 4 -->
     <section>
       <h2>Financial Formula</h2>
       <p>Return on Investment:</p>
-      <p>\\[
+      <p>
+        \[
         ROI = \frac{Net\ Profit}{Investment} \times 100
-      \\]</p>
+        \]
+      </p>
     </section>
 
   </div>
@@ -80,6 +96,7 @@ print(df.head())
 <script>
   Reveal.initialize({
     hash: true,
-    plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
+    plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes]
   });
 </script>
+
